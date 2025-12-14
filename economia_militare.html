@@ -7,7 +7,19 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
+
     <style>
+      /* Nuovi colori e font */
+      :root {
+        --color-primary: #1a1a1a; /* Nero/Grigio scuro */
+        --color-secondary: #4d4d4d; /* Grigio medio */
+        --color-accent: #5a624f; /* Verde militare scuro */
+        --color-text: #333333; /* Testo principale */
+        --color-background-light: #f4f4f4;
+        --font-main: 'Poppins', sans-serif;
+        --font-mono: 'Roboto Mono', monospace;
+      }
+
       html, body {
         height: 100%; 
         margin: 0; 
@@ -16,7 +28,8 @@
         display: flex; 
         flex-direction: column; 
         min-height: 100vh; 
-        font-family: 'Permanent Marker', cursive; 
+        font-family: var(--font-main); 
+        color: var(--color-text);
       }
       .main-content { 
         flex: 1; 
@@ -40,38 +53,48 @@
       .banner-content { 
         position: relative; 
         z-index: 2; 
-        font-size: 2.5rem; 
+        font-size: 3rem; 
         color: white; 
-        text-shadow: 2px 2px 5px black; }
+        text-shadow: 2px 2px 6px black;
+        font-family: var(--font-mono); 
+        letter-spacing: 3px;
+      }
       section { 
         padding: 60px 20px; 
       }
       .section-title { 
-        font-size: 2rem; 
-        color: darkred; 
+        font-size: 2.2rem; 
+        color: var(--color-accent); 
         margin-bottom: 20px; 
         text-align: center; 
+        font-weight: 700;
       }
       .section-text { 
-        font-family: 'Poppins', sans-serif; 
+        font-family: var(--font-main); 
         font-size: 1rem; 
-        color: darkred;
+        color: var(--color-text);
         max-width: 900px; 
         margin: auto; 
         text-align: center; 
+        line-height: 1.6; 
       }
       .section-img { 
         width: 100%; 
-        max-width: 800px; 
+        max-width: 700px; 
         display: block; 
         margin: 25px auto; 
-        border-radius: 12px; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
       }
       footer { 
-        background-color: #000; 
+        background-color: var(--color-primary); 
         color: white; 
         text-align: center; 
         padding: 20px 0; 
+      }
+      /* Aggiornamento colore testo curiosità/esempi */
+      strong[style] {
+        color: var(--color-accent) !important;
       }
     </style>
   </head>
@@ -101,11 +124,11 @@
       <!-- Banner -->
       <div class="banner">
         <img src="https://github.com/nickfinesso/economia-militare/blob/main/economia%20militare.jpg?raw=true" alt="Banner Economia Militare">
-        <div class="banner-content" style="color: blueviolet;">ECONOMIA MILITARE</div>
+        <div class="banner-content">ECONOMIA MILITARE</div>
       </div>
 
       <!-- Intro -->
-      <div class="intro-text" style="color: darkred; text-align:center; max-width:800px; margin:50px auto; font-family:'Poppins', sans-serif;">
+      <div class="intro-text" style="color: var(--color-text); text-align:center; max-width:800px; margin:50px auto; font-family:var(--font-main);">
         <!-- Inserisci qui una breve introduzione sull'economia militare -->
         Benvenuti in questa panoramica sull'economia militare, esplorando industria, strategie e risorse.
       </div>
@@ -120,16 +143,18 @@
             <br><br>
             Eventi chiave, come guerre mondiali e crisi economiche, hanno modificato la produzione industriale e l'organizzazione delle risorse.
             <br><br>
-            <strong style="color:#8b0000;">📌 Curiosità</strong><br>
+            <strong style="color: var(--color-accent);">📌 Curiosità</strong><br>
             • Collegamento tra economia e armamenti.<br>
             • Ruolo delle industrie private.<br>
             • Evoluzione delle strategie di finanziamento.
           </p>
+          <!-- Immagine per la storia: grafico a torta spese militari -->
+          <img class="section-img" src="https://github.com/nickfinesso/economia-militare/blob/main/images.jpeg?raw=true" alt="Storia dell'economia militare">
         </article>
       </section>
 
       <!-- SEZIONE INDUSTRIE -->
-      <section id="industrie" style="background:#f7f7f7;">
+      <section id="industrie" style="background:var(--color-background-light);">
         <article>
           <h2 class="section-title">Industrie Militari</h2>
           <p class="section-text">
@@ -138,7 +163,8 @@
             <br><br>
             Aziende pubbliche e private collaborano per soddisfare le esigenze strategiche e di sicurezza.
           </p>
-          <img class="section-img" src="https://via.placeholder.com/500x300" alt="Industrie Militari">
+          <!-- Immagine per le industrie militari: attrezzature e tecnologia -->
+          <img class="section-img" src="https://github.com/nickfinesso/economia-militare/blob/main/images%20(1).jpeg?raw=true" alt="Industrie Militari">
         </article>
       </section>
 
@@ -150,17 +176,18 @@
             <!-- Inserisci qui le strategie economiche -->
             Strategie economiche e militari sono strettamente legate: gestione delle risorse, pianificazione di lungo termine e investimenti in tecnologia giocano un ruolo cruciale.
             <br><br>
-            <strong style="color:#8b0000;">📌 Esempi</strong><br>
+            <strong style="color: var(--color-accent);">📌 Esempi</strong><br>
             • Bilancio militare nazionale.<br>
             • Sostenibilità e innovazione tecnologica.<br>
             • Partnership internazionali e commercio di armamenti.
           </p>
-          <img class="section-img" src="https://via.placeholder.com/500x300" alt="Strategie Economiche">
+          <!-- Immagine per le strategie economiche: cane robotico -->
+          <img class="section-img" src="https://github.com/nickfinesso/economia-militare/blob/main/images%20(2).jpeg?raw=true" alt="Strategie Economiche">
         </article>
       </section>
 
       <!-- SEZIONE RISORSE -->
-      <section id="risorse" style="background:#efefef;">
+      <section id="risorse" style="background:var(--color-background-light);">
         <article>
           <h2 class="section-title">Risorse e finanziamenti</h2>
           <p class="section-text">
@@ -169,13 +196,14 @@
             <br><br>
             La gestione efficiente delle risorse assicura la continuità della produzione e la capacità di risposta in scenari bellici.
           </p>
-          <img class="section-img" src="https://via.placeholder.com/500x300" alt="Risorse Militari">
+          <!-- Immagine per risorse e finanziamenti: carro armato -->
+          <img class="section-img" src="https://github.com/nickfinesso/economia-militare/blob/main/images%20(3).jpeg?raw=true" alt="Risorse Militari">
         </article>
       </section>
 
     </div>
 
-    <footer>© 2025 — Progetto Scolastico</footer>
+    <footer>© 2025 — Economia Militare</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
